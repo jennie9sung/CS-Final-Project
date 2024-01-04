@@ -7,7 +7,7 @@ public class MainPage {
 
     // function to print 
     public void format(){
-        System.out.println("------------------Mini Games------------------"+"\n");
+        System.out.println("▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ Mini Games ▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄"+"\n");
         System.out.println("\t"+"1."+"\t"+"Hangman");
         System.out.println("\t"+"2."+"\t"+"Sudoku");
         System.out.println("\t"+"3."+"\t"+"Bingo");
