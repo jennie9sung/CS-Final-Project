@@ -101,14 +101,13 @@ public class MasterMind extends Game{
 			}
 							}
 
-//Method that runs entire game
+//Method that runs the entire game
 	public void PlayMastermind() {
 		win=false;
 		Pboard();
 		Rkey();
 		Instructions();
 	while(win!=true) {
-		System.out.print(key);
 		Pboard();
 		RDguess();
 	}
