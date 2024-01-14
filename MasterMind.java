@@ -1,6 +1,7 @@
 import java.util.Scanner;
 import java.util.Random;
 import java.util.ArrayList; 
+
 public class MasterMind extends Game{
 //Define variables
 	int a=0, b=0, c=0, d=0;

@@ -7,6 +7,10 @@ public class Main {
 
         // import classes here
         MainPage begin = new MainPage();
+        Game play = new Game();
+        MasterMind mm = new MasterMind();
+        Bingo bg = new Bingo();
+
         
         // start with printing instructions + user choice
         begin.format();

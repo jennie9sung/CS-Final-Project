@@ -8,8 +8,8 @@ public class MainPage {
     // function to print 
     public void format(){
         System.out.println("▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ Mini Games ▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄"+"\n");
-        System.out.println("\t"+"1."+"\t"+"Hangman");
-        System.out.println("\t"+"2."+"\t"+"Sudoku");
+        System.out.println("\t"+"1."+"\t"+"MasterMind");
+        System.out.println("\t"+"2."+"\t"+"Wordle");
         System.out.println("\t"+"3."+"\t"+"Bingo");
         System.out.println("\t"+"0."+"\t"+"End Mini Games");
         // call a game/ending class based on user choice
