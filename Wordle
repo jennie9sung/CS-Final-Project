@@ -115,7 +115,7 @@ public class WordleGame extends Game {
 
     public static void main(String[] args)  {
         WordleGame wordleGame = new WordleGame("");
-        wordleGame.instruction(0);
+        wordleGame.instruction(3);
         wordleGame.playGame();
       
     }
