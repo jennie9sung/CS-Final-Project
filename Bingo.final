@@ -1,5 +1,6 @@
 import java.util.Scanner;
 import java.util.Random;
+public class Bingo extends Game{
 public class Main
 {
     public static void main(String args[]) {
@@ -171,6 +172,7 @@ System.out.println("The rules:" + "\n" + " * If you think you have Bingo just si
 " * For every number you cross out you get 5 pts");
     }
     
+}
 }
 
 
