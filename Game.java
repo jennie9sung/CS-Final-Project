@@ -13,7 +13,7 @@ public class Game {
     public int[] highestScore = new int[3];
 
     // list of instructions --> use with 'instruction' method to guide user
-    private String [] inst = {"smt","smt2","smt3"};
+    private String [] inst = {"Welcome to Wordle! You have six guesses. A + means you have the right letter in the wrong place, a * means it's the wrong letter. Good luck!","smt2","smt3"};
 
     public void instruction (int gameNum){
         System.out.println(inst[gameNum]);
