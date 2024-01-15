@@ -37,5 +37,15 @@ public class Game {
         System.out.flush();  
     }
 
+    public void exitMiddle(int integer, String string){
+        Main m = new Main();
+        if (integer == 0){
+            m.startEverything();
+        }
+        if(string.equals("0")){
+            m.startEverything();
+        }
+    }
+
     
 }

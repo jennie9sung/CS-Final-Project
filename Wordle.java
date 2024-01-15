@@ -71,7 +71,9 @@ public class Wordle extends Game {
         Scanner scanner = new Scanner(System.in);
         System.out.println("______________________________________________\n");
         System.out.print("Enter your guess: ");
-        return scanner.nextLine().toLowerCase();
+        String guess = scanner.nextLine().toLowerCase();
+        exitMiddle(1, guess);
+        return guess;
     }
 
     // Getter for the hidden word (useful for testing)

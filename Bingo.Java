@@ -42,37 +42,42 @@ public class Bingo extends Game {
             int bingoballer;
             do {
                 ind = random.nextInt(49) + 1;
+                // exitMiddle(ind,"");
                 bingoballer = leftovers[ind];
             } while (bingoballer == 0);
             leftovers[ind] = 0;
             System.out.println("Does " + bingoballer + " match any of your numbers? Y or N");
             String ans = reader.next();
+            exitMiddle(1,ans);
 
             // Checks if the user's number really does equal the randomly generated number
             if (ans.equals(yes)) {
                 System.out.println(
-                        "Let's check! Use (rows,columns) and DONT FORGET TO START THE COUNTING FROM 0" + "\n"
+                        "Let's check! Use (rows,columns) and DONT FORGET TO START THE COUNTING FROM 1" + "\n"
                                 + "Type in the row:");
                 int x = reader.nextInt();
+                exitMiddle(x,"");
                 System.out.println("Type in the column: ");
                 int y = reader.nextInt();
+                exitMiddle(y,"");
 
-                if (result[x][y] != bingoballer) {
+                if (result[x-1][y-1] != bingoballer) {
                     clear();
                     System.out.println("Girl, why are you lying? Don't let it happen again...");
                     TheUserArrayPrints(result);
-                } else if (result[x][y] == bingoballer) {
+                } else if (result[x-1][y-1] == bingoballer) {
                     clear();
                     System.out.println("Alright, guess you weren't lying. + 5 points");
                     // Keeps track of points
                     points += 5;
                     // Shows their bingo card again but with an X in place of the randomly generated
                     // number
-                    result[x][y] = 0;
+                    result[x-1][y-1] = 0;
                     TheUserArrayPrints(result);
 
                     System.out.println("Remember if you have Bingo... Type BINGO in now! If not say: No.");
                     String BINGLETSGO = reader.next();
+                    exitMiddle(1,BINGLETSGO);
                     CheckingForBingo(BINGLETSGO, result);
                 }
             }
@@ -84,6 +89,7 @@ public class Bingo extends Game {
         findHighest(3, points);
         System.out.print("Type any number to go back to main: ");
         int end = reader.nextInt();
+        exitMiddle(end,"");
     }
 
     // This code will make a 5x5 array by inputting non-redundant random numbers from 1~50
@@ -187,6 +193,10 @@ public class Bingo extends Game {
 
     // method to check for bingo
     public void CheckingForBingo(String input, int[][] array) {
+    //     System.out.println("DEBUG: Input received: " + input);  // Add this line
+    // if (input.equals(checks)) {
+    //     System.out.println("DEBUG: Entered if condition");
+
         if (input.equals(checks)) {
             System.out.println("Alright, let's check.");
             // across first row

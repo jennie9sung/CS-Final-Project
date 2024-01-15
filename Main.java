@@ -1,4 +1,5 @@
 import java.util.Scanner;
+//import Bingo;
 
 public class Main {
 
@@ -46,6 +47,7 @@ public class Main {
                     wd.staratW();
                     break;
                 case 3:
+                    //babo bg = new babo();
                     Bingo bg = new Bingo();
                     bg.startB();
                     break;
