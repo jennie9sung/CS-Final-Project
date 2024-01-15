@@ -6,7 +6,7 @@ import java.util.TimerTask;
 public class MasterMind extends Game extends TimerTask{
 //Define variables
 	int a=0, b=0, c=0, d=0;
-	int L1, L2, L3,L4, hScr=0, tempScr;
+	int L1, L2, L3,L4,exit,hScr=0,tempScr;
 	boolean win = false;
 //array that has correct combination 
 	ArrayList<Integer> key = new ArrayList<>();
