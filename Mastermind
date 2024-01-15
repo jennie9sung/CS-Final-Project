@@ -103,7 +103,10 @@ public class MasterMind extends Game extends TimerTask{
 				RDguess();
 				
 			}
-//--------------------------------------//							}
+//--------------------------------------//	
+https://www.softwaretestinghelp.com/java/java-timer-tutorial/ 
+
+
 //Task that is supposed to happen
 public int scrCK() {
 
