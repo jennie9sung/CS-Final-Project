@@ -1,10 +1,12 @@
 import java.util.Scanner;
 import java.util.Random;
 import java.util.ArrayList; 
-public class MasterMind extends Game{
+import java.util.Timer;
+import java.util.TimerTask;
+public class MasterMind extends Game extends TimerTask{
 //Define variables
 	int a=0, b=0, c=0, d=0;
-	int L1, L2, L3,L4;
+	int L1, L2, L3,L4, hScr=0, tempScr;
 	boolean win = false;
 //array that has correct combination 
 	ArrayList<Integer> key = new ArrayList<>();
@@ -76,6 +78,8 @@ public class MasterMind extends Game{
 	public void CKcombo() {
 		if ((L1==a)&& (L2 == b)&&(L3 == c)&&(L4 == d)){
 			System.out.println("You found the correct combo great Job!!!");
+// add ten points
+			tempScr ++10;
 //Set win to true
 			win=true;
 		}
@@ -99,7 +103,21 @@ public class MasterMind extends Game{
 				RDguess();
 				
 			}
-							}
+//--------------------------------------//							}
+//Task that is supposed to happen
+public int scrCK() {
+
+tempScr++0;
+if (tempScr>=hScr){
+hScr = tempScore;
+}
+else if (hScr>tempScr){
+hScr = hScr;
+}
+
+
+
+		   }
 
 //Method that runs the entire game
 	public void PlayMastermind() {
