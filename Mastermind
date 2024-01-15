@@ -115,6 +115,10 @@ else if (hScr>tempScr){
 hScr = hScr;
 }
 
+// Set to array
+highestScore.set(0, hScr);
+}
+
 
 
 		   }
