@@ -43,7 +43,7 @@ public class MasterMind extends Game extends TimerTask{
 		System.out.println( "Each spot could contain a '1' '2' '3' or '4'\nKnow that numbers can be repeated throughout the board.\nGuess the correct combination of numbers and win the game!");
 		System.out.println( "_______________________________\n\n");
 //If want to exit click 0
-		System.out.println("If you do not want to play this game enter '0' to return to the homepage.");
+		System.out.println("If you do not want to play this game enter '0' to return to the homepage. Enter any other number to continue. ");
 		Scanner rd = new Scanner(System.in);
 		exit = rd.nextInt();
 		if (exit==0) {
