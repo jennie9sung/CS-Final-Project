@@ -55,7 +55,7 @@ public class Main {
 
         }while(gn!=0);
         clear();
-        System.out.println("\n\n\n~----Thanks for playing MINI GAMES!----~\n\n\n\n");
+        System.out.println("\n\n\n~-----Thanks for playing MINI GAMES!-----~\n\n\n\n");
     }
 
     public static void clear() {

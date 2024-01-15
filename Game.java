@@ -18,17 +18,20 @@ public class Game {
     " * If you type Y, it will ask for the coordinates where your number supposedly is. DONT FORGET TO START THE COUNTING FROM 0"+ "\n" +
     " * For every number you cross out you get 5 pts"};
 
+    // print instructions based on game number
     public static void instruction (int gameNum){
         System.out.println(inst[gameNum-1]);
     }
 
+    // compare & store the highest score of a specific game
     public void findHighest(int gameNum, int current){
         if (highestScore[gameNum-1]<current){
             highestScore[gameNum-1]=current;
-            System.out.println("highest score: "+highestScore[gameNum-1]);
+            // System.out.println("highest score: "+highestScore[gameNum-1]);
         }
     }
 
+    // clear console
     public static void clear() {
         System.out.print("\033[H\033[2J");  
         System.out.flush();  
