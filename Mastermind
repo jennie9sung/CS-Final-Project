@@ -129,6 +129,7 @@ highestScore.set(0, hScr);
 //Method that runs the entire game
 	public void PlayMastermind() {
 		win=false;
+		tempScr=0;
 		Pboard();
 		Rkey();
 		Instructions();
