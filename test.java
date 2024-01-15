@@ -3,7 +3,7 @@ import java.util.Random;
 
 // used chat GPT to indent the code properly(SHOULD I JUST ERASE THIS)
 
-public class Bingo extends Game {
+public class test extends Game {
 
     // declaration(global)
     private Scanner reader = new Scanner(System.in);
