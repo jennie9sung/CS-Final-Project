@@ -5,10 +5,13 @@ import java.util.Timer;
 
 public class masterM extends Game{
 
-    protected static masterM obj;
+	// method to call class MMCount and MMEnd in certain time duration.
+	// used https://www.geeksforgeeks.org/java-util-timer-class-java/ for the code and chatGPT for the constructor
     public void timerMethod(){
         Timer timer = new Timer();
+		// schedule == just once
         timer.schedule(new MMEnd(this), 50000);
+		// scheduleAtFixedRate == repeat
         // repeated every 10 seconds, starts count down after 10 seconds
         timer.scheduleAtFixedRate(new MMCount(this), 10000, 10000);
 
@@ -34,7 +37,6 @@ public class masterM extends Game{
 	
 //Array of player guesses
 	public ArrayList<Integer> player = new ArrayList<>();
-    public Object timer;
 
 //Create BLANK player board 
 	public void Pboard() {
@@ -62,8 +64,6 @@ public class masterM extends Game{
 		System.out.println(player);
 		System.out.println( );
 		System.out.println( "_______________________________\n\n");
-//If want to exit click 0
-		System.out.println("If you do not want to play this game enter '0' to return to the homepage.");
 		// Scanner rd = new Scanner(System.in);
 		}
 	//}
@@ -72,12 +72,16 @@ public class masterM extends Game{
 	public void RDguess() {
 		Scanner rd = new Scanner(System.in);
 
-//read in values
+//read in values, but user can still exit game if they type 0.
 		System.out.println("Enter in 4 numbers from the first location on the board to the last.\nBe sure to click enter after each number!\n");
 		L1 = rd.nextInt();
+		exitMiddle(L1,"");
 		L2 = rd.nextInt();
+		exitMiddle(L1,"");
 		L3 = rd.nextInt();
+		exitMiddle(L1,"");
 		L4 = rd.nextInt();
+		exitMiddle(L1,"");
 //Set values to player array
 		player.set(0, L1);
 		player.set(1, L2);
@@ -86,7 +90,7 @@ public class masterM extends Game{
 		
 //Check combo after every read
 		CKcombo();
-	
+
 	}
 
 	
@@ -134,13 +138,14 @@ public class masterM extends Game{
         Pboard();
         Rkey();
         instruction(1);
+		Instructions();
         while (win==false) {
             Pboard();
             RDguess();
         }
-        System.out.println("\nTimes out!!\nThe correct answer was {" + key.get(0) + ", " + key.get(1) + ", " + key.get(2) + ", " + key.get(3) + "}.\nType any integer twice to go back to main: ");
-        int exit = reader.nextInt();
-        m.startEverything();
+        // System.out.println("\nTimes out!!\nThe correct answer was {" + key.get(0) + ", " + key.get(1) + ", " + key.get(2) + ", " + key.get(3) + "}.\nType any integer twice to go back to main: ");
+        // int exit = reader.nextInt();
+        // m.startEverything();
 
 	}
 		

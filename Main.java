@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 public class Main {
 
+    // delcaration
     private static Scanner reader = new Scanner(System.in);
     public static int gn;
     // start 
@@ -31,7 +32,7 @@ public class Main {
             }
             gn = reader.nextInt();
             clear();
-            // call games based on user input
+            // call games based on user input, repeated until user chooses 0.
             switch(gn){
                 case 0:
                     Ending end = new Ending();
@@ -53,12 +54,13 @@ public class Main {
                 default:
                     valid = 1;
             }
-
         }while(gn!=0);
         clear();
+        // real ending(exiting)
         System.out.println("\n\n\n~-----Thanks for playing MINI GAMES!-----~\n\n\n\n");
     }
 
+    // method to clear console
     public static void clear() {
         System.out.print("\033[H\033[2J");
         System.out.flush();

@@ -9,6 +9,8 @@ public class MMEnd extends TimerTask {
         this.m = mm;
     }
 
+    // method that will print out messages when time is over.
+    // it will tell the answer and allow user to go back to the main
     public void run() {
         if (!m.win) {
             m.clear();

@@ -21,7 +21,7 @@ public class Bingo extends Game {
         int[][] result = UsersBingo(5, 5);
 
         // Print the 2D array using a separate method
-        System.out.println("Welcome to Bingo! Let's get you a board." + "\n");
+        System.out.println("Welcome to Bingo! Let's get you a board." + "\n**Remember, anytime you want to exit, type 0.**");
         TheUserArrayPrints(result);
 
         // Explains the rules of Bingo
@@ -84,9 +84,9 @@ public class Bingo extends Game {
         }
 
         // These are your points at the end
+        findHighest(3, points);
         System.out.println("GAME OVER!");
         System.out.println("Nice! You ended with " + points + " points.");
-        findHighest(3, points);
         System.out.print("Type any number to go back to main: ");
         int end = reader.nextInt();
         exitMiddle(end,"");

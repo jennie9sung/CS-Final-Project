@@ -12,7 +12,7 @@ public class Game {
     public Scanner reader = new Scanner(System.in);
 
     // keep track of the highest score
-    public int[] highestScore = new int[3];
+    public static int[] highestScore = new int[3];
 
     // list of instructions --> use with 'instruction' method to guide user
     private String [] inst = {"________Welcome to Mastermind________\n\n"+"The goal of this game is to postiton each number into\ntheir corect locations. To begin you are provided a blank board.\n     |\n     v\n","Welcome to Wordle!\nYou have six guesses.\nA + means you have the right letter in the wrong place, a * means it's the wrong letter.\nGood luck!","The rules:" + "\n" + " * If you think you have Bingo just simply type: 'BINGO' " + "\n" +
@@ -23,13 +23,14 @@ public class Game {
     // print instructions based on game number
     public void instruction (int gameNum){
         System.out.println(inst[gameNum-1]);
+        System.out.println("If you do not want to play this game enter '0' to return to the homepage.\n\n");
     }
 
     // compare & store the highest score of a specific game
     public void findHighest(int gameNum, int current){
         if (highestScore[gameNum-1]<current){
             highestScore[gameNum-1]=current;
-            System.out.println("highest score: "+highestScore[gameNum-1]);
+            //System.out.println("highest score: "+highestScore[gameNum-1]);
         }
     }
 
@@ -39,6 +40,8 @@ public class Game {
         System.out.flush();  
     }
 
+    // method that allows user to exit the game while they are still playing.
+    // both String and integer input of 0 will lead the user back to the homepage.
     public void exitMiddle(int integer, String string){
         Main m = new Main();
         if (integer == 0){
