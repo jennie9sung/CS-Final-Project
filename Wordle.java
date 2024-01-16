@@ -83,7 +83,6 @@ public class Wordle extends Game {
 
     // Main game loop
     public void playGame() {
-        Scanner scanner = new Scanner(System.in);
         Main m = new Main();
 
         // Initialize the WordleGame with a random word from the list
@@ -96,7 +95,6 @@ public class Wordle extends Game {
         setRandomWord(possibleWords);
 
         // Get hints based on the initial state (all underscores)
-       
         System.out.println("\nInitial Hint: " + getHint("_____"));
 
         // Game loop
@@ -109,7 +107,6 @@ public class Wordle extends Game {
 
             // Get hints based on the user's guess
             String hint = getHint(userGuess);
-
             System.out.println("~~\t\t{WORDLE}\t\t~~\n");
             System.out.println("______________________________________________\n");
 
@@ -139,15 +136,15 @@ public class Wordle extends Game {
 
             attempts++;
             System.out.println("Attempts remaining: " + (6 - attempts));
-           points = 100 - ((attempts-1) * 20); 
-           System.out.println(" You have " + points + " points!");
+            points = 100 - ((attempts-1) * 20); 
+            System.out.println(" You have " + points + " points!");
         }
 
         // Check if the player ran out of attempts
         if (attempts == 6) {
         	points+=0; 
-        	  System.out.println("You have " + points + "points!");
-              System.out.println("___________________");
+        	System.out.println("You have " + points + "points!");
+            System.out.println("___________________");
             System.out.println("Sorry, you've run out of attempts. The word was: " + getWord());
             System.out.println("Type any number to go back to main.");
             int exit = reader.nextInt();

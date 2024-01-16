@@ -3,7 +3,7 @@ import java.util.Random;
 import java.util.ArrayList; 
 import java.util.Timer;
 
-public class masterM extends Game{
+public class MasterMind extends Game{
 
 	// method to call class MMCount and MMEnd in certain time duration.
 	// used https://www.geeksforgeeks.org/java-util-timer-class-java/ for the code and chatGPT for the constructor
@@ -26,7 +26,7 @@ public class masterM extends Game{
     public int timeLeft;
 
     // constructor
-    public masterM(){
+    public MasterMind(){
         points = 100;
         timeLeft = 50;
     }

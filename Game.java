@@ -35,6 +35,7 @@ public class Game {
     }
 
     // clear console
+    // https://www.javatpoint.com/how-to-clear-screen-in-java
     public void clear() {
         System.out.print("\033[H\033[2J");  
         System.out.flush();  
