@@ -21,7 +21,7 @@ public class Bingo extends Game {
         int[][] result = UsersBingo(5, 5);
 
         // Print the 2D array using a separate method
-        System.out.println("Welcome to Bingo! Let's get you a board." + "\n**Remember, anytime you want to exit, type 0.**");
+        System.out.println("Welcome to Bingo! Let's get you a board." + "\n");
         TheUserArrayPrints(result);
 
         // Explains the rules of Bingo

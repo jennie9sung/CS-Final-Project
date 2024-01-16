@@ -39,7 +39,7 @@ public class Main {
                     end.theEnd();
                     break;
                 case 1:
-                    masterM m = new masterM();
+                    MasterMind m = new MasterMind();
                     m.PlayMastermind();
                     break;
                 case 2:
@@ -61,6 +61,7 @@ public class Main {
     }
 
     // method to clear console
+    // https://www.javatpoint.com/how-to-clear-screen-in-java
     public static void clear() {
         System.out.print("\033[H\033[2J");
         System.out.flush();

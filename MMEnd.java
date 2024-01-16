@@ -2,10 +2,10 @@ import java.util.TimerTask;
 
 public class MMEnd extends TimerTask {
 
-    private masterM m;
+    private MasterMind m;
 
     // used chatGPT for constructor
-    public MMEnd(masterM mm) {
+    public MMEnd(MasterMind mm) {
         this.m = mm;
     }
 
