@@ -21,7 +21,7 @@ public class Bingo extends Game {
         int[][] result = UsersBingo(5, 5);
 
         // Print the 2D array using a separate method
-        System.out.println("Welcome to Bingo! Let's get you a board." + "\n**Remember, anytime you want to exit, type 0.**");
+        System.out.println("Welcome to Bingo! Let's get you a board." + "\n");
         TheUserArrayPrints(result);
 
         // Explains the rules of Bingo
@@ -84,9 +84,9 @@ public class Bingo extends Game {
         }
 
         // These are your points at the end
-        findHighest(3, points);
         System.out.println("GAME OVER!");
         System.out.println("Nice! You ended with " + points + " points.");
+        findHighest(3, points);
         System.out.print("Type any number to go back to main: ");
         int end = reader.nextInt();
         exitMiddle(end,"");
@@ -211,6 +211,29 @@ public class Bingo extends Game {
                 System.out.println("BINGOOOO YOU WIN!!!!(+ 10 points)");
                 points += 10;
             }
+            
+            //across fourth row
+            else if (array[3][0] == 0 && array[3][1] == 0 && array[3][2] == 0 && array[3][3] == 0
+                    && array[3][4] == 0) {
+                System.out.println("BINGOOOO YOU WIN!!!!(+ 10 points)");
+                points += 10;
+            }
+            
+            //across third row
+            else if (array[2][0] == 0 && array[2][1] == 0 && array[2][2] == 0 && array[2][3] == 0
+                    && array[2][4] == 0) {
+                System.out.println("BINGOOOO YOU WIN!!!!(+ 10 points)");
+                points += 10;
+            }
+            
+            //across second row
+            else if (array[1][0] == 0 && array[1][1] == 0 && array[1][2] == 0 && array[1][3] == 0
+                    && array[1][4] == 0) {
+                System.out.println("BINGOOOO YOU WIN!!!!(+ 10 points)");
+                points += 10;
+            }
+            
+            
             // top to bottom first row
             else if (array[0][0] == 0 && array[1][0] == 0 && array[2][0] == 0 && array[3][0] == 0
                     && array[4][0] == 0) {
@@ -223,6 +246,28 @@ public class Bingo extends Game {
                 System.out.println("BINGOOOO YOU WIN!!!!(+ 10 points)");
                 points += 10;
             }
+            
+            //top to bottom fourth row
+            else if (array[0][3] == 0 && array[1][3] == 0 && array[2][3] == 0 && array[3][3] == 0
+                    && array[4][3] == 0) {
+                System.out.println("BINGOOOO YOU WIN!!!!(+ 10 points)");
+                points += 10;
+            }
+            
+            //top to bottom third row 
+            else if (array[0][2] == 0 && array[1][2] == 0 && array[2][2] == 0 && array[3][2] == 0
+                    && array[4][2] == 0) {
+                System.out.println("BINGOOOO YOU WIN!!!!(+ 10 points)");
+                points += 10;
+            }
+            
+            //top to bottom secound row
+            else if (array[0][1] == 0 && array[1][1] == 0 && array[2][1] == 0 && array[3][1] == 0
+                    && array[4][1] == 0) {
+                System.out.println("BINGOOOO YOU WIN!!!!(+ 10 points)");
+                points += 10;
+            }
+            
             // across left to right
             else if (array[0][0] == 0 && array[1][1] == 0 && array[2][2] == 0 && array[3][3] == 0
                     && array[4][4] == 0) {
