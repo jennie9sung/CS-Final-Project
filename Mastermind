@@ -85,6 +85,9 @@ public class MasterMind extends Game extends TimerTask{
 //Set win to true
 			win=true;
 		}
+                else if (L1==0)||(L2 == 0)||(L3 == 0||(L4 == 0){
+                        // call hompage 
+		}
 		else{
 //If individual scores are true
 				if (L1 == a)
