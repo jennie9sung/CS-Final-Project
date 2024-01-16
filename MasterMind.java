@@ -105,8 +105,9 @@ public class MasterMind extends Game{
             exitMiddle(exitM,"");
             m.startEverything();
 //Set win to true
-		}
-		else{
+		}else if ((L1>4)||(L2 >4)||(L3 >4||(L4>4))){
+			System.out.println("Remember, only enter values from 1 until 4!");
+		}else{
 //If individual scores are true
 				if (L1 == a)
 				{

@@ -16,7 +16,7 @@ public class Ending extends Game{
         System.out.println("---------------------------------");
 
         // user can choose to restart the entire minigame or quit
-        System.out.print("\n\nDo you want to retry?\nType 'R' to retry or 'E' to exit: ");
+        System.out.print("\n\nDo you want to retry?\nType 'R' to retry or any other thing to exit: ");
         end = reader.next();
         if(end.equalsIgnoreCase("r")){
             // reset saved data
