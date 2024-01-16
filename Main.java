@@ -38,9 +38,8 @@ public class Main {
                     end.theEnd();
                     break;
                 case 1:
-                    MasterMind mm = new MasterMind();
-                    System.out.println("game1");
-                    mm.PlayMastermind();
+                    masterM m = new masterM();
+                    m.PlayMastermind();
                     break;
                 case 2:
                     Wordle wd = new Wordle("");
