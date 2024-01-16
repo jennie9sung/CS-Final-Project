@@ -118,13 +118,13 @@ public class Wordle extends Game {
             if (getWord().equals(userGuess)) {
                 System.out.println("Congratulations! You've guessed the word.");
                 points+= 0;
+                findHighest(2, points);
 
                 // check if highest score + store highest score
                 System.out.println(" You have " + points + " points!");
                 System.out.println("Hidden Word: " + getWord());
                 System.out.println("Type any number to go back to main.");
                 int exit = reader.nextInt();
-                findHighest(2, points);
                 m.startEverything();
                 
                 //m.startEverything();

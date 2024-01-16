@@ -84,9 +84,9 @@ public class Bingo extends Game {
         }
 
         // These are your points at the end
+        findHighest(3, points);
         System.out.println("GAME OVER!");
         System.out.println("Nice! You ended with " + points + " points.");
-        findHighest(3, points);
         System.out.print("Type any number to go back to main: ");
         int end = reader.nextInt();
         exitMiddle(end,"");

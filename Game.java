@@ -12,7 +12,7 @@ public class Game {
     public Scanner reader = new Scanner(System.in);
 
     // keep track of the highest score
-    public int[] highestScore = new int[3];
+    public static int[] highestScore = new int[3];
 
     // list of instructions --> use with 'instruction' method to guide user
     private String [] inst = {"________Welcome to Mastermind________\n\n"+"The goal of this game is to postiton each number into\ntheir corect locations. To begin you are provided a blank board.\n     |\n     v\n","Welcome to Wordle!\nYou have six guesses.\nA + means you have the right letter in the wrong place, a * means it's the wrong letter.\nGood luck!","The rules:" + "\n" + " * If you think you have Bingo just simply type: 'BINGO' " + "\n" +
