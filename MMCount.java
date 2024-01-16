@@ -17,6 +17,8 @@ public class MMCount extends TimerTask {
             System.out.println("****" + m.timeLeft + " seconds left!!****");
             m.points -= 20;
             System.out.println("points: " + m.points);
+        }else{
+            cancel();
         }
     }
 }
