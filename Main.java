@@ -47,7 +47,6 @@ public class Main {
                     wd.staratW();
                     break;
                 case 3:
-                    //babo bg = new babo();
                     Bingo bg = new Bingo();
                     bg.startB();
                     break;
@@ -68,4 +67,3 @@ public class Main {
     }
 
 }
-

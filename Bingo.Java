@@ -1,7 +1,6 @@
 import java.util.Scanner;
 import java.util.Random;
 
-// used chat GPT to indent the code properly(SHOULD I JUST ERASE THIS)
 
 public class Bingo extends Game {
 
@@ -232,7 +231,6 @@ public class Bingo extends Game {
                 System.out.println("BINGOOOO YOU WIN!!!!(+ 10 points)");
                 points += 10;
             }
-            
             
             // top to bottom first row
             else if (array[0][0] == 0 && array[1][0] == 0 && array[2][0] == 0 && array[3][0] == 0
