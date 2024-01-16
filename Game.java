@@ -45,11 +45,14 @@
      // both String and integer input of 0 will lead the user back to the homepage.
      public void exitMiddle(int integer, String string){
          Main m = new Main();
+         MasterMind mm = new MasterMind();
          if (integer == 0){
              m.startEverything();
+             mm.win = true;
          }
          if(string.equals("0")){
              m.startEverything();
+             mm.win = true;
          }
      }
  
