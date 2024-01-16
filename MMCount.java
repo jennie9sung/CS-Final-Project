@@ -9,8 +9,10 @@ public class MMCount extends TimerTask {
         this.m = mm;
     }
 
+    // this method will be used to print out how many seconds are left and the points they will earn
+    // every 10 seconds until the user wins or time is over. 
     public void run() {
-        if (m.timeLeft > 0 && !m.win) {
+        if (m.timeLeft > 0 && m.win==false) {
             m.timeLeft -= 10;
             System.out.println("****" + m.timeLeft + " seconds left!!****");
             m.points -= 20;

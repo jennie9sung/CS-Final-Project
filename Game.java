@@ -23,13 +23,14 @@ public class Game {
     // print instructions based on game number
     public void instruction (int gameNum){
         System.out.println(inst[gameNum-1]);
+        System.out.println("If you do not want to play this game enter '0' to return to the homepage.\n\n");
     }
 
     // compare & store the highest score of a specific game
     public void findHighest(int gameNum, int current){
         if (highestScore[gameNum-1]<current){
             highestScore[gameNum-1]=current;
-            System.out.println("highest score: "+highestScore[gameNum-1]);
+            //System.out.println("highest score: "+highestScore[gameNum-1]);
         }
     }
 
@@ -39,6 +40,8 @@ public class Game {
         System.out.flush();  
     }
 
+    // method that allows user to exit the game while they are still playing.
+    // both String and integer input of 0 will lead the user back to the homepage.
     public void exitMiddle(int integer, String string){
         Main m = new Main();
         if (integer == 0){

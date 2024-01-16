@@ -154,7 +154,6 @@ public class Wordle extends Game {
             m.startEverything();
         }
 
-        //scanner.close();
     }
     
 }
