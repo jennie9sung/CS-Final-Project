@@ -1,14 +1,33 @@
+import java.util.Scanner;
+
 public class Ending extends Game{
 
     public void theEnd(){
-        // add code here later
+        Scanner reader = new Scanner(System.in);
+        Main m = new Main();
+        String end;
+        // print out result
         System.out.println("\n"+"\n"+"~~~~~~~~~~Game Summary~~~~~~~~~~"+"\n");
         System.out.println("Your highest score for...");
         System.out.println("---------------------------------");
-        System.out.println("|"+"\t"+"Hangman:"+"\t"+highestScore[0]+"\t"+"|");
-        System.out.println("|"+"\t"+"Sudoku:"+"\t"+"\t"+highestScore[1]+"\t"+"|");
+        System.out.println("|"+"\t"+"MasterMind"+"\t"+highestScore[0]+"\t"+"|");
+        System.out.println("|"+"\t"+"Wordle:"+"\t"+"\t"+highestScore[1]+"\t"+"|");
         System.out.println("|"+"\t"+"Bingo:"+"\t"+"\t"+highestScore[2]+"\t"+"|");
         System.out.println("---------------------------------");
+
+        System.out.print("\n\nDo you want to retry?\nType 'R' to retry or 'E' to exit: ");
+        end = reader.next();
+        if(end.equalsIgnoreCase("r")){
+            // reset saved data
+            for(int x=0; x<3; x++){
+                highestScore[x]=0;
+            }
+            // restart minigame
+            m.startEverything();
+        }else{
+            // end
+            m.gn=0;
+        }
     }
     
 }
