@@ -134,7 +134,7 @@ highestScore.set(0, hScr);
 		Rkey();
 		Instructions();
 	while(win!=true) {
-		Pboard();
+		
 		RDguess();
 	}
 	//Call Main Page
