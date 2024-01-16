@@ -57,7 +57,7 @@ public class MasterMind extends Game extends TimerTask{
 		Scanner rd = new Scanner(System.in);
 
 //read in values
-		System.out.println("Enter in 4 numbers from the first location on the board to the last.\nBe sure to click enter after each number!");
+		System.out.println("Enter in 4 numbers from the first location on the board to the last Enter zero for any one of them if you want to quit.\nBe sure to click enter after each number!");
 		L1 = rd.nextInt();
 		L2 = rd.nextInt();
 		L3 = rd.nextInt();
